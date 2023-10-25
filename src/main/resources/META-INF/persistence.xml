@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="lab" transaction-type="JTA">
+        <jta-data-source>jdbc/lab1_java_ee</jta-data-source>
+        <class>com.example.demo.entity.Character</class>
+        <class>com.example.demo.entity.Bonus</class>
+        <class>com.example.demo.entity.Artefact</class>
+        <class>com.example.demo.entity.Weapon</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/lab1_java_ee" />
+            <property name="javax.persistence.jdbc.user" value="EgorChitorkin" />
+            <property name="javax.persistence.jdbc.password" value="261101" />
+        </properties>
+    </persistence-unit>
+</persistence>
